@@ -1,0 +1,8 @@
+.main-panel {
+    padding-top: 15px;
+    background-color: #e8e8e8;
+    height: calc(100vh - 50px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
