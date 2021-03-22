@@ -18,7 +18,7 @@ export default class Header extends React.Component {
                  <div className="header__user">
                     <div className="header__user-avatar">
                        {/*Откуда вытаскивать фотки - public или src?*/}
-                       <img src="admin.jpg" alt="" className="header__user-img"/>
+                       <img src="img/admin.jpg" alt="" className="header__user-img"/>
                     </div>
                     <span className="header__user-name">admin</span>
                  </div>
