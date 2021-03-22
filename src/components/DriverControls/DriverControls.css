@@ -1,12 +1,8 @@
 .driver__controls {
     width: 73px;
     height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -ms-flex-line-pack: start;
     align-content: flex-start;
 }
 
@@ -17,8 +13,9 @@
     position: relative;
     border: none;
     border-radius: .6em;
-    background-color: #495464;
+    background-color: #fff;
     cursor: pointer;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.6);
 }
 
 .driver__button:focus {
@@ -35,10 +32,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     width: 22px;
     height: 22px;
-    fill: #fff;
+    fill: #EC4F43;
 }

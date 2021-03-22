@@ -1,6 +1,8 @@
 .header {
     height: 50px;
-    background-color: #495464;
+    background-color: #FE948D;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .3);
+    z-index: 4;
 }
 
 .header__inner {
