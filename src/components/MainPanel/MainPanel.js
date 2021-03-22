@@ -2,6 +2,7 @@ import './MainPanel.css'
 import React from "react";
 import DriversPanel from "../Drivers-panel/DriversPanel";
 import Map from "../Map/Map";
+import Loader from "../Loader/Loader";
 import firebase from "firebase";
 
 export default class MainPanel extends React.Component {
@@ -42,16 +43,13 @@ export default class MainPanel extends React.Component {
       else {
          return(
            <main className="main-panel">
-              Loading
+              <Loader/>
            </main>
          )
       }
       // return (
       //   <main className="main-panel">
-      //      <div className="main-panel__inner">
-      //         <DriversPanel drivers={this.state.drivers}/>
-      //         <Map drivers={this.state.drivers}/>
-      //      </div>
+      //      <Loader/>
       //   </main>
       // )
 
