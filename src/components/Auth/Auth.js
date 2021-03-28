@@ -6,8 +6,8 @@ export default class Auth extends React.Component {
    constructor(props) {
       super(props);
       this.state = {
-         login: null,
-         password: null,
+         login: 'essent1al26@yandex.ru',
+         password: '315220kalter',
       }
       this.onLoginChange = this.onLoginChange.bind(this);
       this.onPassChange = this.onPassChange.bind(this);
@@ -31,10 +31,10 @@ export default class Auth extends React.Component {
            {this.props.failCount}
            <form className={'auth__form'}>
               <label className={'auth__label'} htmlFor="">
-                 <input className={'auth__input'} type="text" placeholder={'Логин'} onChange={this.onLoginChange}/>
+                 <input className={'auth__input'} type="text" placeholder={'Логин'} onChange={this.onLoginChange} value={this.state.login}/>
               </label>
               <label className={'auth__label'} htmlFor="">
-                 <input className={'auth__input'} type="text" placeholder={'Пароль'} onChange={this.onPassChange}/>
+                 <input className={'auth__input'} type="text" placeholder={'Пароль'} onChange={this.onPassChange} value={this.state.password}/>
               </label>
               <button className={'auth__button'} onClick={(e)=> {
                  e.preventDefault();

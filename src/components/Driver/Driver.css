@@ -1,5 +1,5 @@
 .driver {
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
     background-color: #fff;
     margin-bottom: 15px;
     border-radius: 10px;
@@ -65,13 +65,36 @@
     margin-right: 45px;
 }
 
+.driver__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
 .driver__full-name {
+    display: inline-block;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     color: #3B3B3B;
     font-size: 24px;
-    margin-bottom: 15px;
+
     text-align: start;
+}
+
+.driver__is-online {
+    font-size: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.driver__is-online--true {
+    background-color: #4FFFA9;
+}
+
+.driver__is-online--false {
+    background-color: #FE948D;
 }
 
 .driver__info-row {
@@ -116,19 +139,21 @@
     margin-bottom: 25px;
 }
 
-.driver__status::before {
-    content: '';
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    align-self: center;
-    margin-right: 10px;
-}
+/*.driver__status::before {*/
+/*    content: '';*/
+/*    display: block;*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    border-radius: 50%;*/
+/*    align-self: center;*/
+/*    margin-right: 10px;*/
+/*}*/
 
-.driver__status--road::before {
-    background-color: #4FFFA9;
-}
+/*.driver__status--road::before {*/
+/*    background-color: #4FFFA9;*/
+/*}*/
+
+
 
 .driver__status-timer {
     font-family: 'Open Sans', sans-serif;

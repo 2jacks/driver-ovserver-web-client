@@ -47,12 +47,5 @@ export default class MainPanel extends React.Component {
            </main>
          )
       }
-      // return (
-      //   <main className="main-panel">
-      //      <Loader/>
-      //   </main>
-      // )
-
-
    }
 }

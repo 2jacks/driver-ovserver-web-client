@@ -15,17 +15,17 @@
     border-radius: .6em;
     background-color: #fff;
     cursor: pointer;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
 }
 
 .driver__button:focus {
     outline: none;
-    border: 2px solid #325855;
+    border: 2px solid #EC4F43;
     border-radius: .6em;
 }
 
 .driver__button.active {
-    background-color: rgba(61, 106, 102, 0.561);
+    background-color: #FE948D;
 }
 
 .driver__button-icon {

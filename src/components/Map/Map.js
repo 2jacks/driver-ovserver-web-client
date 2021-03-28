@@ -16,14 +16,17 @@ export default class Map extends React.Component {
       }
    }
    render() {
-      const drivers = this.props.drivers.map((driver) =>
-        <Marker
-         key={driver.personal.uid.toString()}
-         position={[driver.geo.location.lat, driver.geo.location.long]}>
-           <Popup>
-              {driver.personal.name}
-           </Popup>
-         </Marker>
+      const drivers = this.props.drivers.map((driver) => {
+           if (driver.state.isOnline) {
+              return <Marker
+                key={driver.personal.uid.toString()}
+                position={[driver.geo.location.lat, driver.geo.location.long]}>
+                 <Popup>
+                    {driver.personal.name}
+                 </Popup>
+              </Marker>
+           }
+      }
       );
 
       return(
