@@ -3,6 +3,7 @@ import React from "react";
 import DriverControls from "../DriverControls/DriverControls";
 import classnames from 'classnames'
 import firebase from "firebase";
+import moment from "moment";
 
 export default class Driver extends React.Component {
    constructor(props) {
@@ -26,7 +27,6 @@ export default class Driver extends React.Component {
          appId: "1:902202774868:web:47c2ff275a92125ed6a4c1"
       };
       !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
-
       firebase.database().ref('drivers/' + this.props.data.personal.uid + '/state/isOnline').on('value', (snapshot) => {
          this.setState({driverIsOnline: snapshot.val()})
       })
@@ -38,6 +38,13 @@ export default class Driver extends React.Component {
    render() {
       const showProfile = this.state.showPersonalInfo
       const driverIsOnline = this.state.driverIsOnline ? 'driver__is-online driver__is-online--true' : 'driver__is-online driver__is-online--false'
+
+      const changeDate = moment(this.props.data.state.timestamp);
+      const currentDate = moment();
+
+      const timerHours = currentDate.diff(changeDate, 'hours');
+      const timerMinutes = currentDate.diff(changeDate, 'minutes') % 60;
+
       return(
         <div className="driver">
            <div className="driver__menu">
@@ -54,7 +61,7 @@ export default class Driver extends React.Component {
                     <div>
                        <h2 className="driver__status">
                           {this.props.data.state.status}
-                          <span className="driver__status-timer">45 мин</span>
+                          <span className="driver__status-timer">{`${timerHours}:${timerMinutes}`}</span>
                        </h2>
                     </div>
                  </div>
