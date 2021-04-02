@@ -75,7 +75,7 @@ export default class Driver extends React.Component {
               </div>
 
               <div className="driver__info-row">
-                 <div className="driver__key">Телефон:</div>
+                 <div className="driver__key">Телефонs:</div>
                  <div className="driver__value">{this.props.data.personal.phone}</div>
               </div>
 
