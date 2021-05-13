@@ -71,7 +71,7 @@ export default class Driver extends React.Component {
            <div className={classnames('driver__profile', {'show': showProfile})}>
               <div className="driver__info-row">
                  <div className="driver__key">id:</div>
-                 <div className="driver__value">{this.props.data.personal.id}</div>
+                 <div className="driver__value">{this.props.key}</div>
               </div>
 
               <div className="driver__info-row">

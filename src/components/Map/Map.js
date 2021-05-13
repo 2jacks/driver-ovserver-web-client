@@ -19,7 +19,7 @@ export default class Map extends React.Component {
       const drivers = this.props.drivers.map((driver) => {
            if (driver.state.isOnline) {
               return <Marker
-                key={driver.personal.uid.toString()}
+                key={driver.key}
                 position={[driver.geo.location.lat, driver.geo.location.long]}>
                  <Popup>
                     {driver.personal.name}

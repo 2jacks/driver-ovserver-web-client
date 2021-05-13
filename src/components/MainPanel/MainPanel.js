@@ -25,9 +25,12 @@ export default class MainPanel extends React.Component {
       };
       !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
       let drivers = firebase.database().ref('drivers/');
+
       drivers.on('value', (snapshot) => {
-         this.setState({drivers: Object.values(snapshot.val())});
+         console.log(Object.entries(snapshot.val()))
+         this.setState({drivers: Object.entries(snapshot.val())});
       })
+
    }
 
    render() {
