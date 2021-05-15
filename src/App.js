@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css';
 import firebase from "firebase";
 // import AdminPage from "./components/AdminPage/AdminPage";
-import Auth from './components/Auth/Auth';
+// import Auth from './components/Auth/Auth';
 import Header from "./components/Header/Header";
 import MainPanel from "./components/MainPanel/MainPanel";
 
@@ -57,7 +57,7 @@ export default class App extends React.Component {
    }
 
    render() {
-      let isAuth = this.state.isAuth;
+      // let isAuth = this.state.isAuth;
       return (
              <div className="App">
                 <Header/>

@@ -2,10 +2,10 @@ import React from "react"
 import './DriverControls.css'
 
 class DriverButton extends React.Component {
-   constructor(props) {
-      super(props);
-
-   }
+   // constructor(props) {
+   //    super(props);
+   //
+   // }
 
    render() {
       return(

@@ -27,7 +27,6 @@ export default class MainPanel extends React.Component {
       let drivers = firebase.database().ref('drivers/');
 
       drivers.on('value', (snapshot) => {
-         console.log(Object.entries(snapshot.val()))
          this.setState({drivers: Object.entries(snapshot.val())});
       })
 
